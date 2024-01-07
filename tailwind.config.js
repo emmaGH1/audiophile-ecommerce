@@ -32,9 +32,9 @@ module.exports = {
 				600: '#CD2C2C',
 			},
 			white: {
-				100: '#FFFFFF',
-				200: '#FAFAFA',
-				400: '#F1F1F1',
+        'text': '#FFFFFF',
+				'primary': '#FAFAFA',
+				'secondary': '#F1F1F1',
 			},
 			black: {
 				200: '#CFCFCF',
