@@ -25,24 +25,20 @@ module.exports = {
 		},
 		colors: {
 			orange: {
-				300: '#FBAF85',
+				'primary': '#FBAF85',
 				600: '#D87D4A',
 			},
-			red: {
-				600: '#CD2C2C',
-			},
 			white: {
-        'text': '#FFFFFF',
+                'text': '#FFFFFF',
 				'primary': '#FAFAFA',
 				'secondary': '#F1F1F1',
 			},
-			black: {
-				200: '#CFCFCF',
-				400: '#979797',
-				600: '#4c4c4c',
-				800: '#101010',
-				900: '#000000',
-			},
+			black: '#191919',
+		},
+		width: {
+			'3/10': '30%',
+			'7/10': '70%',
+			'9/10': '90%',
 		},
 	},
   plugins: [],
