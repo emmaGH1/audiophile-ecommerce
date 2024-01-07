@@ -9,17 +9,6 @@ module.exports = {
 		  fontFamily: {
 			  sans: ['Manrope', 'sans-serif'],
 		  },
-		  fontSize: {
-			  xs: '.815rem',
-			  sm: '.875rem',
-			  base: '.94rem',
-			  lg: '1.125rem',
-			  '2xl': '1.5rem',
-			  '3xl': '1.75rem',
-			  '4xl': '2rem',
-			  '5xl': '2.5rem',
-			  '6xl': '3.5rem',
-		  },
 		  screens: {
 			  md: '768px',
 			  lg: '1110px',
@@ -27,7 +16,7 @@ module.exports = {
 		  colors: {
 			  orange: {
 				  'primary': '#FBAF85',
-				  600: '#D87D4A',
+				  'secondary': '#D87D4A',
 			  },
 			  white: {
 				  'text': '#FFFFFF',
