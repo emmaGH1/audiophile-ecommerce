@@ -27,7 +27,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={manrope.className}>
-      <body className="">
+      <body className=" bg-black">
         <Navbar />
         <main className="min-h-screen flex flex-col items-center">
           {children}
