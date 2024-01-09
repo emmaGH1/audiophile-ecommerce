@@ -4,7 +4,7 @@ interface NavLinks {
   imgUrl?: string
 }[]
 
-export const NavLinks = [
+export const NavLinks: NavLinks[] = [
             {
             label: 'Home',
             path: '/',
@@ -12,13 +12,16 @@ export const NavLinks = [
             {
             label: 'Headphones',
             path: '/headphones',
+            imgUrl: '/assets/category-headphones/mobile/image-xx99-mark-one.jpg'
             },
             {
                 label: 'Speakers',
-                path: '/speakers'
+                path: '/speakers',
+                imgUrl: '/assets/category-speakers/mobile/image-zx9.jpg'
             },
             {
                 label: 'Earphones',
-                path: '/earphones'
+                path: '/earphones',
+                imgUrl: '/assets/category-earphones/mobile/image-yx1-earphones.jpg'
             },
 ]
