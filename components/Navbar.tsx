@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { usePathname } from 'next/navigation'
 
-import { NavLinks } from "@/assets/constants"
+import { NavLinks } from "@/app/lib/constants"
 import { Menu, ShoppingCart, User } from "lucide-react"
 
 export const Navbar = () => {
@@ -17,7 +17,7 @@ export const Navbar = () => {
                 <ShoppingCart />
             </div>
 
-            <div className="hidden lg:hidden md:flex w-9/10 mx-auto justify-between     items-center py-4 text-lg">
+            <div className="hidden lg:hidden md:flex w-9/10 mx-auto justify-between items-center py-4 text-lg">
                 <div className="flex items-center">
                     <Menu className="font-bold text-white"/>
                     <h1 className="font-extrabold text-3xl ml-10">audiophile</h1>
@@ -47,6 +47,16 @@ export const Navbar = () => {
                     <User className="mx-3 hover:text-orange-primary transition-colors duration-300 cursor-pointer"/>
                     <ShoppingCart className="hover:text-orange-primary transition-colors duration-300 cursor-pointer"/>
                 </div>
+            </div>
+
+            <div className="flex flex-col">
+               {
+                NavLinks.slice(1).map((link) => (
+                    <Link href={link.path} key={link.label}>
+                       
+                    </Link>
+                ))
+               }
             </div>
 
             <div className="h-px w-full md:w-9/10 mx-auto bg-gray-500/20"/>
