@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation'
 
 import { NavLinks } from "@/app/lib/constants"
 import { Menu, ShoppingCart, User } from "lucide-react"
+import Image from "next/image"
 
 export const Navbar = () => {
     const pathname = usePathname()
@@ -49,15 +50,7 @@ export const Navbar = () => {
                 </div>
             </div>
 
-            <div className="flex flex-col">
-               {
-                NavLinks.slice(1).map((link) => (
-                    <Link href={link.path} key={link.label}>
-                       
-                    </Link>
-                ))
-               }
-            </div>
+             <Image src='/assets/category-earphones/mobile/image-yx1-earphones.jpg' alt='earphones' width={20} height={30}/>
 
             <div className="h-px w-full md:w-9/10 mx-auto bg-gray-500/20"/>
         </div>

@@ -1,7 +1,9 @@
+import { StaticImport } from "next/dist/shared/lib/get-img-props"
+
 interface NavLinks {
   label: string,
   path: string,
-  imgUrl?: string
+  imgUrl?: string 
 }[]
 
 export const NavLinks: NavLinks[] = [
