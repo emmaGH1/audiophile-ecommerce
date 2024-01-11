@@ -14,16 +14,16 @@ export const NavLinks: NavLinks[] = [
             {
             label: 'Headphones',
             path: '/headphones',
-            imgUrl: '/assets/category-headphones/mobile/image-xx99-mark-one.jpg'
+            imgUrl: '/shared/desktop/image-headphones.png'
             },
             {
                 label: 'Speakers',
                 path: '/speakers',
-                imgUrl: '/assets/category-speakers/mobile/image-zx9.jpg'
+                imgUrl: '/shared/desktop/image-speakers.png'
             },
             {
                 label: 'Earphones',
                 path: '/earphones',
-                imgUrl: '/assets/category-earphones/mobile/image-yx1-earphones.jpg'
+                imgUrl: '/shared/desktop/image-earphones.png'
             },
 ]

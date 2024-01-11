@@ -3,24 +3,34 @@
 import Link from "next/link"
 import { usePathname } from 'next/navigation'
 
+import { useState } from "react"
 import { NavLinks } from "@/app/lib/constants"
-import { Menu, ShoppingCart, User } from "lucide-react"
+import { ChevronRight, Menu, ShoppingCart, User, X } from "lucide-react"
 import Image from "next/image"
 
 export const Navbar = () => {
+    const [showNavbar, setShowNavbar] = useState(false)
     const pathname = usePathname()
 
     return (
-        <div className="relative  bg-black text-white-text">
-            <div className="w-9/10 mx-auto flex justify-between     items-center py-4 md:hidden">
-                <Menu />
+        <div className="relative  bg-black-900 text-white-text">
+            <div className="w-9/10 mx-auto flex justify-between     items-center py-6 md:hidden">
+               {showNavbar ? 
+                   <X className="stroke-[3px] text-white" onClick={() => setShowNavbar(prev => !prev)}/>
+                      :
+                   <Menu className="stroke-[3px] text-white" onClick={() => setShowNavbar(prev => !prev)} />
+                    }
                 <h1 className="font-extrabold text-2xl">audiophile</h1>
                 <ShoppingCart />
             </div>
 
             <div className="hidden lg:hidden md:flex w-9/10 mx-auto justify-between items-center py-4 text-lg">
-                <div className="flex items-center">
-                    <Menu className="font-bold text-white"/>
+                <div className="flex items-center ">
+                  {showNavbar ? 
+                    <X className="mt-2 text-white stroke-[3px]" onClick={() => setShowNavbar(prev => !prev)}/>
+                      :
+                    <Menu className="mt-2 stroke-[3px] text-white" onClick={() => setShowNavbar(prev => !prev)} />
+                   }
                     <h1 className="font-extrabold text-3xl ml-10">audiophile</h1>
                 </div>
                 <div className="flex">
@@ -50,7 +60,26 @@ export const Navbar = () => {
                 </div>
             </div>
 
-             <Image src='/assets/category-earphones/mobile/image-yx1-earphones.jpg' alt='earphones' width={20} height={30}/>
+            <div className={`${showNavbar ? "w-full bg-white-primary grid grid-cols-1 md:grid-cols-3 lg:hidden" : "hidden"}`}>
+               {
+                NavLinks.slice(1).map((link) => {
+                    return (
+                        <div key={link.label} className="
+                          w-9/10 md:w-4/5 bg-white-secondary text-black-900 flex flex-col mx-auto items-center my-6 first:mt-16 md:first:mt-20 md:mt-20 rounded-xl
+                        ">
+                        <Image src={link.imgUrl!} alt={link.label} width={150} height={200} className="-mt-10"/>
+                          <Link href={link.path} className="uppercase text-black-900 font-bold mb-4">
+                            {link.label}
+                          </Link>
+                          <Link href={link.path} className="text inline-flex items-center text-black-400 uppercase text-xs mb-8">
+                            <p>Shop</p>
+                            <ChevronRight className=" text-orange-600 w-4 h-4"/>
+                          </Link>
+                        </div>
+                    )
+                })
+               } 
+            </div>
 
             <div className="h-px w-full md:w-9/10 mx-auto bg-gray-500/20"/>
         </div>
