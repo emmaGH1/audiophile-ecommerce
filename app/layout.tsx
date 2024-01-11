@@ -1,6 +1,7 @@
 import { Manrope } from 'next/font/google'
 import './globals.css'
 import { Navbar } from '@/components/Navbar'
+import Footer from '@/components/ui/Footer'
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -27,11 +28,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={manrope.className}>
-      <body className=" bg-black-900">
+      <body className="">
         <Navbar />
         <main className="min-h-screen flex flex-col items-center">
           {children}
         </main>
+        <Footer />
       </body>
     </html>
   )
