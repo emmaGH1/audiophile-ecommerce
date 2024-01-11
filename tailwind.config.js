@@ -14,12 +14,22 @@ module.exports = {
 				'primary': '#FBAF85',
 				'secondary': '#D87D4A',
 			},
+			red: {
+				600: '#CD2C2C',
+			},
 			white: {
 				'text': '#FFFFFF',
 				'primary': '#FAFAFA',
 				'secondary': '#F1F1F1',
 			},
-			black: '#191919',
+			black: {
+				200: '#CFCFCF',
+				400: '#979797',
+				600: '#4c4c4c',
+				800: '#101010',
+				900: '#000000',
+			},
+			
 		},
 		width: {
 			'3/10': '30%',
