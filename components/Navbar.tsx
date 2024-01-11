@@ -20,7 +20,7 @@ export const Navbar = () => {
                       :
                    <Menu className="stroke-[3px] text-white" onClick={() => setShowNavbar(prev => !prev)} />
                     }
-                <h1 className="font-extrabold text-2xl">audiophile</h1>
+                <Link href='/' className="font-extrabold text-2xl">audiophile</Link>
                 <ShoppingCart />
             </div>
 
@@ -31,16 +31,18 @@ export const Navbar = () => {
                       :
                     <Menu className="mt-2 stroke-[3px] text-white" onClick={() => setShowNavbar(prev => !prev)} />
                    }
-                    <h1 className="font-extrabold text-3xl ml-10">audiophile</h1>
+                    <Link href='/' className="font-extrabold text-3xl ml-10">audiophile</Link>
                 </div>
                 <div className="flex">
                   <ShoppingCart />
-                  <User className="mx-4" />
+                 <Link href='/login'>
+                   <User className="mx-4" />
+                 </Link> 
                 </div>
             </div>
 
             <div className="hidden lg:flex flex-row w-9/10 mx-auto items-center justify-between py-4">
-               <h1 className="font-extrabold text-3xl">audiophile</h1>
+               <Link href='/' className="font-extrabold text-3xl">audiophile</Link>
                <ul>
                     {NavLinks.map(link => {
                         return (
@@ -68,10 +70,10 @@ export const Navbar = () => {
                           w-9/10 md:w-4/5 bg-white-secondary text-black-900 flex flex-col mx-auto items-center my-6 first:mt-16 md:first:mt-20 md:mt-20 rounded-xl
                         ">
                         <Image src={link.imgUrl!} alt={link.label} width={150} height={200} className="-mt-10"/>
-                          <Link href={link.path} className="uppercase text-black-900 font-bold mb-4">
+                          <Link href={link.path} className="uppercase text-black-900 font-bold mb-4" onClick={() => setShowNavbar(false)}>
                             {link.label}
                           </Link>
-                          <Link href={link.path} className="text inline-flex items-center text-black-400 uppercase text-xs mb-8">
+                          <Link href={link.path} className="text inline-flex items-center text-black-400 uppercase text-xs mb-8" onClick={() => setShowNavbar(false)} >
                             <p>Shop</p>
                             <ChevronRight className=" text-orange-600 w-4 h-4"/>
                           </Link>
@@ -79,6 +81,9 @@ export const Navbar = () => {
                     )
                 })
                } 
+               <Link href='/login' className="flex text-black-900 ml-5 mt-3 mb-2 items-center" onClick={() => setShowNavbar(false)} >
+                 <User className="mr-2"/> Sign In / Create Account
+               </Link>
             </div>
 
             <div className="h-px w-full md:w-9/10 mx-auto bg-gray-500/20"/>
