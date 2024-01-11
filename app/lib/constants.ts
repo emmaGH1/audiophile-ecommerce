@@ -1,12 +1,7 @@
-import { StaticImport } from "next/dist/shared/lib/get-img-props"
+import { Links } from "./types"
 
-interface NavLinks {
-  label: string,
-  path: string,
-  imgUrl?: string 
-}[]
 
-export const NavLinks: NavLinks[] = [
+export const NavLinks: Links[] = [
             {
             label: 'Home',
             path: '/',
