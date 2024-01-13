@@ -22,6 +22,11 @@ export const NavLinks: Links[] = [
             },
 ]
 
+export const heroText = `
+Experience natural, lifelike audio and exceptional
+ build quality made for the passionate music enthusiast.
+`
+
 export const footerText =`
     Audiophile is an all in one stop to fulfill your audio needs. 
     We're a small team of music lovers and sound specialists who are devoted to helping you get the most out of personal audio. 
