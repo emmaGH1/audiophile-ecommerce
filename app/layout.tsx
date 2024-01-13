@@ -30,7 +30,7 @@ export default function RootLayout({
     <html lang="en" className={manrope.className}>
       <body className="flex flex-col">
         <Navbar />
-        <main className="min-h-screen flex flex-col items-center">
+        <main className="min-h-screen">
           {children}
         </main>
         <Footer />
