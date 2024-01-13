@@ -1,10 +1,11 @@
+import Hero from "@/components/ui/home/Hero";
 import { fetchData } from "./lib/data";
 
 const Page = () => {
 
   return (
-    <div>
-     
+    <div className="">
+      <Hero />
     </div>
   );
 };

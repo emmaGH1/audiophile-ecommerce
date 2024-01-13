@@ -9,6 +9,11 @@ module.exports = {
 			md: '768px',
 			lg: '1110px',
 		},
+		backgroundImage: {
+			'hero-desktop': "url('/home/desktop/image-hero.jpg')",
+			'hero-mobile': "url('/home/mobile/image-header.jpg')",
+			'hero-tablet': "url('/home/tablet/image-header.jpg')"
+		},
 		colors: {
 			orange: {
 				'primary': '#FBAF85',
