@@ -28,6 +28,7 @@ module.exports = {
 				'secondary': '#F1F1F1',
 			},
 			black: {
+			   'banner': '#191919',
 				200: '#CFCFCF',
 				400: '#979797',
 				600: '#4c4c4c',
