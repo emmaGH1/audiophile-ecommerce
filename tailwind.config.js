@@ -7,7 +7,7 @@ module.exports = {
 	  extend: {
 		screens: {
 			md: '768px',
-			lg: '1110px',
+			lg: '1024px',
 		},
 		backgroundImage: {
 			'hero-desktop': "url('/home/desktop/image-hero.jpg')",
