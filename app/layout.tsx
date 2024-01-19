@@ -1,7 +1,7 @@
 import { Manrope } from 'next/font/google'
 import './globals.css'
-import { Navbar } from '@/components/Navbar'
-import Footer from '@/components/ui/Footer'
+import { Navbar } from '@/components/ui/shared/Navbar'
+import Footer from '@/components/ui/shared/Footer'
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
