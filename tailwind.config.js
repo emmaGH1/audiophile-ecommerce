@@ -14,7 +14,7 @@ module.exports = {
 			'hero-desktop': "url('/home/desktop/image-hero.jpg')",
 			'hero-mobile': "url('/home/mobile/image-header.jpg')",
 			'hero-tablet': "url('/home/tablet/image-header.jpg')",
-			'pattern-circle-svg': "url('/public/home/desktop/pattern-circles.svg')"
+			'pattern-circle-svg': "url('/home/desktop/pattern-circles.svg')"
 		},
 		colors: {
 			orange: {
