@@ -8,3 +8,13 @@
         height: 70vh;
     }
 }
+
+/* In your Tailwind CSS config file */
+.bg-pattern-overlay {
+  @apply bg-orange-400; /* Base background color */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3C/svg%3E"); /* Empty SVG placeholder for pattern placement */
+}
+
+.bg-pattern-overlay svg {
+  @apply fill-current; /* Ensure pattern color matches background color */
+}
