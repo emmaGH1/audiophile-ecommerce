@@ -1,16 +1,18 @@
 import { heroText } from "@/app/lib/constants";
 import Link from "next/link";
 import { Button } from "../shared/Button";
+import { Title } from "../shared/Title";
+import { Description } from "../shared/Description";
 
 export const HeroSection = () => {
   return (
     <section>
-       <div className=" bg-hero-mobile sm:bg-hero-tablet lg:bg-hero-desktop bg-cover bg-bottom lg:bg-right">
+       <div className="bg-bottom bg-cover lg:bg-fixed bg-hero-mobile sm:bg-hero-tablet lg:bg-hero-desktop lg:bg-right">
           <div className="flex flex-col text-center lg:text-left uppercase h-[60vh] lg:h-screen hero lg:w-9/10 lg:mx-auto">
             <div className=" tracking-[0.45em] text-base font-bold text-black-400/80 pt-24">new product</div>
-            <h1 className="font-extrabold text-4xl md:text-5xl lg:text-6xl text-white-text pt-5 sm:w-2/4 sm:mx-auto lg:mx-0">xx99 mark ii headphones</h1>
-            <p className="lowercase text-sm md:text-base text-black-400 pt-5 pb-12 sm:pb-5 md:pb-12  w-9/10 sm:w-2/4 lg:w-[35%] mx-auto lg:mx-0">{heroText}</p>
-            <Button />
+            <Title text="xx99 mark ii headphones" />
+            <Description text={heroText} />
+            <Button className="transition-colors duration-150 bg-orange-secondary hover:bg-orange-secondary/80 text-white-text" />
           </div>
        </div>
     </section>
