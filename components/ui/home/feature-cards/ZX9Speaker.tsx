@@ -1,35 +1,61 @@
-
 import { zx9SpeakerText } from "@/app/lib/constants";
-import { Button } from "../../shared/Button";
+import { Description } from "../../shared/Description";
 import ImageContainer from "../../shared/ImageContainer";
-
+import { Title } from "../../shared/Title";
+import { Button } from "../../shared/Button";
+import Image from "next/image";
 
 export const ZX9Speaker = () => {
-
- return (
-    <div className="bg-orange-secondary bg-pattern-circle-svg bg-top bg-contain lg:bg-contain lg:bg-repeat lg:bg-left bg-no-repeat flex flex-col lg:flex-row justify-center items-center my-10 rounded-lg">
-        <div className="mt-14 lg:-mb-2 overflow-hidden">
-            <ImageContainer 
-              mobileSrc="/home/mobile/image-speaker-zx9.png"
-              tabletSrc="/home/tablet/image-speaker-zx9.png"
-              desktopSrc="/home/desktop/image-speaker-zx9.png"
-              mobileHeight={100}
-              mobileWidth={160}
-              tabletWidth={200}
-              tabletHeight={100}
-              desktopHeight={500}
-              desktopWidth={400}
-              alt='ZX9 Speakers'
-              
-            />            
-        </div>
-        <div className="text-white-text flex flex-col justify-center text-center lg:ml-20 lg:text-left">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold uppercase w-2/4 mx-auto lg:mx-0 mt-7">
-                zx9 speaker
-            </h2>
-            <p className=" text-white-text/70 text-sm w-7/10 lg:mx-0 lg:w-2/4 mx-auto mt-8 mb-10">{zx9SpeakerText}</p>
-            <Button className="bg-black-900 mb-12 md:mt-5 md:mb-16"/>
-        </div>
+  return (
+    <div className="container flex flex-col w-full mt-14 rounded-xl bg-orange-secondary">
+      <div className="relative flex flex-col items-center justify-center pt-12 pb-10 lg:hidden">
+          <Image 
+             src='/home/desktop/pattern-circles.svg' 
+             alt='' 
+             width={100}
+             height={100}
+             className="absolute left-0 right-0 object-cover w-full h-full -top-32"
+          />
+          <ImageContainer 
+            mobileSrc="/home/mobile/image-speaker-zx9.png"
+            mobileWidth={160}
+            mobileHeight={100}
+            tabletSrc="/home/tablet/image-speaker-zx9.png"
+            tabletWidth={200}
+            tabletHeight={100}
+            desktopSrc="/home/desktop/image-speaker-zx9.png"
+            desktopWidth={300}
+            desktopHeight={100}
+            alt="ZX9 Speaker"
+          />
+          <Title text='zx9 speaker' className="w-2/4 mt-5 text-center md:w-2/5 md:text-[3.5rem]" />
+          <Description text={zx9SpeakerText} className="w-3/4 text-center text-white-text/50" />
+          <Button className="mt-10 rounded-sm bg-black-900" />
+      </div>
+      <div className="relative hidden w-4/5 mx-auto overflow-hidden lg:flex pt-28">
+          <Image 
+             src='/home/desktop/pattern-circles.svg' 
+             alt='' 
+             width={500}
+             height={100}
+             className="absolute object-cover object-left w-full h-full"
+          />
+          <div className="-mb-2">
+            <Image 
+              src='/home/desktop/image-speaker-zx9.png' 
+              width={600} height={100} 
+              alt="ZX9 Speaker"
+            />
+          </div>
+          <div className="flex flex-col ml-36">
+            <Title text="zx9 speaker" className="tracking-[.2em] lg:text-5xl" />
+            <Description 
+              text={zx9SpeakerText} 
+              className="lg:text-base lg:font-light text-white-text/60 lg:w-[80%]"
+            />
+            <Button />
+          </div>
+      </div>
     </div>
   );
-}
+};
