@@ -10,7 +10,7 @@ interface ButtonProps {
 export const Button = ({ className, children = 'see product', linkTo = '/' }: ButtonProps) => {
   return (
     <Link href={linkTo}>
-        <button type="button" className={cn("px-8 py-3 uppercase font-bold text-sm", `bg-orange-500 hover:bg-orange-500/80 transition-colors duration-150 text-white-text ${className} `)}>
+        <button type="button" className={cn("px-8 py-3 uppercase font-bold text-sm", `text-white-text bg-black-900 ${className} `)}>
           {children}
         </button>
     </Link>
