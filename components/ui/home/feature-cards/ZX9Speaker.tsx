@@ -32,23 +32,24 @@ export const ZX9Speaker = () => {
           <Description text={zx9SpeakerText} className="w-3/4 text-center text-white-text/50" />
           <Button className="mt-10 rounded-sm bg-black-900" />
       </div>
-      <div className="relative hidden w-4/5 mx-auto overflow-hidden lg:flex pt-28">
+      <div className="relative z-10 hidden overflow-hidden lg:flex pt-28">
           <Image 
              src='/home/desktop/pattern-circles.svg' 
              alt='' 
-             width={500}
+             width={1000}
              height={100}
-             className="absolute object-cover object-left w-full h-full"
+             className="absolute -top-[20%] -left-[15%] -z-10"
           />
-          <div className="-mb-2">
+          <div className="-mb-2 ml-28">
             <Image 
               src='/home/desktop/image-speaker-zx9.png' 
-              width={600} height={100} 
+              width={500} height={100} 
               alt="ZX9 Speaker"
+              className=""
             />
           </div>
           <div className="flex flex-col ml-36">
-            <Title text="zx9 speaker" className="tracking-[.2em] lg:text-5xl" />
+            <Title text="zx9 speaker" className="tracking-[.15em] lg:text-5xl" />
             <Description 
               text={zx9SpeakerText} 
               className="lg:text-base lg:font-light text-white-text/60 lg:w-[80%]"
