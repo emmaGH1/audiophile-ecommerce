@@ -1,18 +1,20 @@
+import Image from "next/image";
 import { Button } from "../../shared/Button";
 import ImageContainer from "../../shared/ImageContainer";
 import { Title } from "../../shared/Title";
 
 export const ZX7Speaker = () => {
   return (
-    <div className="container relative flex flex-col justify-center w-full h-full mt-10 overflow-hidden py-36">
+    <div className="relative w-full my-10 h-[22rem] md:h-[19rem] flex items-center">
+      {/* <Image src='/home/desktop/image-speaker-zx7.jpg' alt="zx7 speaker" fill  className="rounded-xl -z-10" /> */}
       <ImageContainer 
           mobileSrc="/home/mobile/image-speaker-zx7.jpg"
           tabletSrc="/home/tablet/image-speaker-zx7.jpg"
           desktopSrc="/home/desktop/image-speaker-zx7.jpg"
           alt="ZX7 Speaker"
-          fill={true}
+          fill
           quality={100}
-          className="absolute object-cover sm:object-contain -z-10 rounded-xl"
+          className="rounded-lg md:rounded-xl -z-10 md:object-cover"
       />
       <div className="flex flex-col ml-5 lg:ml-20">
         <h1

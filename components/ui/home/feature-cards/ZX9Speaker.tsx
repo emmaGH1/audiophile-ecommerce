@@ -59,7 +59,7 @@ export const ZX9Speaker = () => {
             text={zx9SpeakerText}
             className="lg:text-base lg:font-light text-white-text/60 lg:w-[80%]"
           />
-          <Button />
+          <Button className="transition-colors duration-300 hover:border hover:bg-transparent"/>
         </div>
       </div>
     </div>
