@@ -7,8 +7,8 @@ import { Description } from "../shared/Description";
 export const HeroSection = () => {
   return (
     <section>
-       <div className="bg-bottom bg-cover lg:bg-fixed bg-hero-mobile sm:bg-hero-tablet lg:bg-hero-desktop lg:bg-right">
-          <div className="flex flex-col text-center lg:text-left uppercase h-[60vh] lg:h-screen hero lg:w-9/10 lg:mx-auto">
+       <div className="bg-bottom bg-cover xl:bg-fixed bg-hero-mobile sm:bg-hero-tablet xl:bg-hero-desktop xl:bg-right">
+          <div className="flex flex-col text-center xl:text-left uppercase h-[60vh] xl:h-screen hero xl:w-9/10 xl:mx-auto lg:items-center xl:items-start">
             <div className=" tracking-[0.45em] text-base font-bold text-black-400/80 pt-24">new product</div>
             <Title text="xx99 mark ii headphones" />
             <Description text={heroText} />
