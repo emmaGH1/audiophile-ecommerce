@@ -13,7 +13,7 @@ export const metadata = {
     template: '%s | Audiophile',
     default: 'Audiophile'
   },
-  description: 'Get the best audio quality with Audiophile',
+  description: 'Best Quality Audio Only',
 }
 
 const manrope = Manrope({
