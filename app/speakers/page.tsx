@@ -1,6 +1,19 @@
+import { fetchData } from "../lib/data"
+import { aboutText } from '../lib/constants';
 
-export default function Page() {
+export default async function Page() {
+  const data  = await fetchData()
+  
   return (
-    <div>page</div>
+    <div>
+      <img src='' />
+      {data?.map((each) => {
+        return (
+          <div>
+            {JSON.stringify(each)}
+          </div>
+        )
+      })}
+    </div>
   )
 }
