@@ -1,6 +1,5 @@
 import ImageContainer from "@/components/ui/shared/ImageContainer";
 import { fetchProductsByCategory } from "../lib/data";
-import { Description } from '../../components/ui/shared/Description';
 import { Button } from "@/components/ui/shared/Button";
 import Explore from "@/components/ui/shared/Explore";
 import About from "@/components/ui/shared/About";
@@ -8,7 +7,6 @@ import About from "@/components/ui/shared/About";
 
 export default async function Page() {
   const data = await fetchProductsByCategory('speakers')
-  console.log(data)
   return (
     <>
         <div className="text-white-text bg-black-banner flex justify-center mb-10">
