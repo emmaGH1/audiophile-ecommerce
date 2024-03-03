@@ -9,40 +9,39 @@ export default async function Page() {
   console.log(data)
   return (
     <>
-      <div className="text-white-text bg-black-banner flex justify-center mb-10">
-         <h1 className="text-4xl uppercase font-extrabold my-10 lg:my-20">
-          headphones
-         </h1>
-      </div>
+        <div className="text-white-text bg-black-banner flex justify-center mb-10">
+          <h1 className="text-4xl uppercase font-extrabold my-10 lg:my-20">
+            headphones
+          </h1>
+        </div>
 
-      <div className="mt-10">
-          {data.map((each, i) => {
-            
-            return (
-              <div className="relative flex flex-col md:flex-row mb-10 even:md:flex-row-reverse" key={i}>
+      <div className="mt-20">
+        {data.map((item, ) => {
+          return (
+            <div className="flex flex-col lg:flex-row lg:even:flex-row-reverse w-9/10 mx-auto lg:justify-between xl:h-[85vh] mb-28" key={item.slug}>
                 <ImageContainer 
-                  mobileSrc={each.image_mobile}
-                  tabletSrc={each.image_mobile}
-                  desktopSrc={each.image_desktop}
+                  mobileSrc={item.image_mobile}
+                  tabletSrc={item.image_mobile}
+                  desktopSrc={item.image_desktop}
                   fill
-                  alt={each.name}
-                  className=" object-cover sm:object-contain"
-                  containerStyle="relative w-9/10 mx-auto h-96 mb-7"
+                  alt={item.name}
+                  className="md:object-contain lg:object-cover lg:object-center"
+                  containerStyle="relative lg:w-[45%] w-full h-96 xl:h-auto"
                 />
 
-                <div className="mx-auto flex flex-col justify-center items-center md:items-start md:justify-normal">
-                    <div className="uppercase text-center text-orange-secondary tracking-[0.5em] text-sm">
-                      {each.new && 'New Product'}
+                <div className=" lg:w-[45%] lg:flex lg:flex-col lg:justify-center lg:text-left text-center">
+                    <div className="uppercase text-orange-secondary tracking-[0.5em] text-sm mt-5 lg:mt-0">
+                      {item.new && 'New Product'}
                     </div>
-                    <h1 className="text-3xl font-bold uppercase w-2/4 mt-3 text-center md:text-start">
-                      {each.name}
+                    <h1 className="text-3xl font-bold uppercase mt-3 lg:w-2/4 md:mt-10">
+                      {item.name}
                     </h1>
-                    <Description text={each.description} className="mt-0 text-center leading-relaxed w-9/10 tracking-wide md:text-start md:w-full"/>
-                    <Button className=" bg-orange-secondary mb-14"/>
+                    <p className="leading-relaxed tracking-wide w-full mt-5 md:w-4/5 lg:w-full md:mx-auto">{item.description}</p> 
+                    <Button className=" bg-orange-secondary mt-7 hover:bg-orange-secondary/80"/>
                 </div>
-              </div>
-            )
-          })}
+         </div>
+          )
+        })}
       </div>
     </>
   )
