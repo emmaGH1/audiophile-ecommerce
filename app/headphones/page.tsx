@@ -2,6 +2,8 @@ import ImageContainer from "@/components/ui/shared/ImageContainer";
 import { fetchProductsByCategory } from "../lib/data";
 import { Description } from '../../components/ui/shared/Description';
 import { Button } from "@/components/ui/shared/Button";
+import Explore from "@/components/ui/shared/Explore";
+import About from "@/components/ui/shared/About";
 
 
 export default async function Page() {
@@ -43,6 +45,14 @@ export default async function Page() {
           )
         })}
       </div>
+      
+      <Explore />
+
+      <div className="mt-32 mb-20">
+        <About/>
+      </div>
+      
+
     </>
   )
 };

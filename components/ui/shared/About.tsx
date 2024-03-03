@@ -1,6 +1,6 @@
 import { aboutText } from "@/app/lib/constants";
-import { Description } from "../shared/Description";
-import ImageContainer from "../shared/ImageContainer";
+import { Description } from "./Description";
+import ImageContainer from "./ImageContainer";
 
 const About = () => {
   return (
