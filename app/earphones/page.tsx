@@ -1,6 +1,5 @@
 import ImageContainer from "@/components/ui/shared/ImageContainer";
 import { fetchProductsByCategory } from "../lib/data";
-import { Description } from '../../components/ui/shared/Description';
 import { Button } from "@/components/ui/shared/Button";
 import Explore from "@/components/ui/shared/Explore";
 import About from "@/components/ui/shared/About";
@@ -8,11 +7,10 @@ import About from "@/components/ui/shared/About";
 
 export default async function Page() {
   const data = await fetchProductsByCategory('earphones')
-  console.log(data)
   return (
     <>
-        <div className="text-white-text bg-black-banner flex justify-center mb-10">
-          <h1 className="text-4xl uppercase font-extrabold my-10 lg:my-20">
+        <div className="flex justify-center mb-10 text-white-text bg-black-banner">
+          <h1 className="my-10 text-4xl font-extrabold uppercase lg:my-20">
             earphones
           </h1>
         </div>
@@ -32,13 +30,13 @@ export default async function Page() {
                 />
 
                 <div className=" lg:w-[45%] lg:flex lg:flex-col lg:justify-center lg:text-left text-center">
-                    <div className="uppercase text-orange-secondary tracking-[0.5em] text-sm mt-5 lg:mt-0">
+                <div className="uppercase text-orange-secondary tracking-[0.5em] text-sm mt-5 lg:mt-0">
                       {item.new && 'New Product'}
                     </div>
-                    <h1 className="text-3xl font-bold uppercase mt-3 lg:w-2/4 md:mt-10">
+                    <h1 className="mt-3 text-3xl font-bold uppercase lg:w-2/4 md:mt-4">
                       {item.name}
                     </h1>
-                    <p className="leading-relaxed tracking-wide w-full mt-5 md:w-4/5 lg:w-full md:mx-auto">{item.description}</p> 
+                    <p className="w-full mt-5 leading-relaxed tracking-wide md:text-sm md:font-extralight text-black-400 md:w-4/5 lg:w-full md:mx-auto">{item.description}</p> 
                     <Button className=" bg-orange-secondary mt-7 hover:bg-orange-secondary/80"/>
                 </div>
          </div>
